@@ -1,0 +1,29 @@
+Circle
+27
+Tower Hill
+Aldgate
+Liverpool Street
+Moorgate
+Barbican
+Farringdon
+King's Cross
+Euston Square
+Great Portland Street
+Baker Street
+Edgware Road
+Paddington
+Bayswater
+Notting Hill Gate
+High Street Kensington
+Gloucester Road
+South Kensington
+Sloane Square
+Victoria
+St.James's Park
+Westminster
+Embankment
+Temple
+Blackfriars
+Mansion House
+Cannon Street
+Monument
