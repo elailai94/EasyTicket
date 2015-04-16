@@ -1,3 +1,3 @@
 # EasyTicket
 ### About
-A simple ticketing system for the London Underground
+EasyTicket is a simple ticketing system for the London Underground. It is written entirely in Python.
