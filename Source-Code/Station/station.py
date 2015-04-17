@@ -17,11 +17,11 @@ class Station:
     # - zone is an Int (zone that this station is located in)
     # - lines is a (listof Str) (lines that this station is part of)
 
-	# Initializes the object.
-	def __init__(self, name, zone):
-		self.name = name
-		self.zone = zone
-		self.lines = []
+    # Initializes the object.
+    def __init__(self, name, zone):
+	self.name = name
+	self.zone = zone
+	self.lines = []
 
     # Returns a string representation of the object.
     def __repr__(self):
@@ -30,10 +30,10 @@ class Station:
     	# Stores the concatenated string
     	lines_str = ''
     	for line in self.lines:
-    		lines_str += line
-    		if (i < (len(self.lines) - 1)): # Last element in the list?
-    			lines_str += ', '
-    		i += 1
+    	    lines_str += line
+    	    if (i < (len(self.lines) - 1)): # Last element in the list?
+    		lines_str += ', '
+    	    i += 1
     	return 'Station Name:%s  Zone:%d  Lines:%s' \
                % (self.name, self.zone, lines_str)
 
