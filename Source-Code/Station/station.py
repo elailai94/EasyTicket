@@ -32,7 +32,7 @@ class Station:
     	    if (i < (len(self.lines) - 1)):
     	        lines_str += ', '
             i += 1
-    	return 'Station Name:%s Zone:%d Lines:%s' \
+    	return 'Station Name:%s  Zone:%d  Lines:%s' \
                % (self.name, self.zone, lines_str)
 
     # Returns True if self and other represent stations with the same name
