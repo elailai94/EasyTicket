@@ -32,7 +32,7 @@ class Station:
     	# Concatenates all line in lines into one string
     	for line in self.lines:
     	    lines_str += line
-    	    if (i < (len(self.lines) - 1)): # Last line in the lines?
+    	    if (i < (len(self.lines) - 1)): # Last line in lines?
     		lines_str += ', '
     	    i += 1
     	return 'Station Name:%s  Zone:%d  Lines:%s' \
