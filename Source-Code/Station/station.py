@@ -29,9 +29,10 @@ class Station:
     	i = 0
     	# Stores the concatenated string
     	lines_str = ''
+    	# Concatenates all line in lines into one string
     	for line in self.lines:
     	    lines_str += line
-    	    if (i < (len(self.lines) - 1)): # Last element in the list?
+    	    if (i < (len(self.lines) - 1)): # Last line in the lines?
     		lines_str += ', '
     	    i += 1
     	return 'Station Name:%s  Zone:%d  Lines:%s' \
