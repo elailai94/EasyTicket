@@ -29,25 +29,25 @@ class Station:
     	lines_str = ''
     	for line in self.lines:
             lines_str += line
-    		    if (i < (len(self.lines) - 1)):
-    			     lines_str += ', '
-    		    i += 1
-    	  return 'Station Name:%s Zone:%d Lines:%s' \
+    	    if (i < (len(self.lines) - 1)):
+    	        lines_str += ', '
+            i += 1
+    	return 'Station Name:%s Zone:%d Lines:%s' \
                % (self.name, self.zone, lines_str)
 
     # Returns True if self and other represent stations with the same name
     # and False otherwise.
     def __eq__(self, other):
-    	  return isinstance(self, Station) and \
-    	         isinstance(other, Station) and \
-    	         self.name == other.name
+    	return isinstance(self, Station) and \
+    	       isinstance(other, Station) and \
+    	       self.name == other.name
 
     # Returns True if self and other represent stations with different names
     # and False otherwise.
     def __ne__(self, other):
-    	  return self != other
+    	return self != other
 
     # Adds a line to the lines field.
     def add_line(self, line):
-    	  isinstance(self, Station)
-    	  self.lines.append(line)
+    	isinstance(self, Station)
+    	self.lines.append(line)
