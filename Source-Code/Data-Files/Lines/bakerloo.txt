@@ -1,27 +1,27 @@
 Bakerloo
 25
-Elephant & Castle
-Lambeth North
-Waterloo
-Embankment
-Charing Cross
-Piccadilly Circus
-Oxford Circus
-Regent's Park
-Baker Street
-Marylebone
-Edgware Road
-Paddington
-Warwick Avenue
-Maida Vale
-Kilburn Park
-Queen's Park
-Kensal Green
-Willesden Junction
-Harlesden
-Stonebridge Park
-Wembley Central
-North Wembley
-South Kenton
-Kenton
-Harrow & Wealdstone
+Elephant & Castle; 1 + 2
+Lambeth North; 1
+Waterloo; 1
+Embankment; 1
+Charing Cross; 1
+Piccadilly Circus; 1
+Oxford Circus; 1
+Regent's Park; 1
+Baker Street; 1
+Marylebone; 1
+Edgware Road; 1
+Paddington; 1
+Warwick Avenue; 2
+Maida Vale; 2
+Kilburn Park; 2
+Queen's Park; 2
+Kensal Green; 2
+Willesden Junction; 2 + 3
+Harlesden; 3
+Stonebridge Park; 3
+Wembley Central; 4
+North Wembley; 4
+South Kenton; 4
+Kenton; 4
+Harrow & Wealdstone; 5
