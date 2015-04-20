@@ -1,0 +1,61 @@
+District
+59
+Upminster; 6
+Upminster Bridge; 6
+Hornchurch; 6
+Elm Park; 6
+Dagenham East; 5
+Dagenham Heathway; 5
+Becontree; 5
+Upney; 4
+Barking; 4
+East Ham; 3 + 4
+Upton Park; 3
+Plaistow; 3
+West Ham; 3
+Bromley-by-Bow; 2 + 3
+Bow Road; 2 
+Mile End; 2
+Stepney Green; 2
+Whitechapel; 2
+Aldgate East; 1
+Tower Hill; 1
+Monument; 1
+Cannon Street; 1
+Mansion House; 1
+Blackfriars; 1
+Temple; 1
+Embankment; 1
+Westminster; 1
+St. James's Park; 1
+Victoria; 1
+Sloane Square; 1
+South Kensington; 1
+Gloucester Road; 1
+Edgware Road; 1
+Paddington; 1
+Bayswater; 1
+Notting Hill Gate; 1 + 2
+High Street Kensington; 1
+Earl's Court; 1 + 2
+West Brompton; 2
+Fulham Broadway; 2
+Parsons Green; 2
+Putney Bridge; 2
+East Putney; 2 + 3
+Southfields; 3
+Wimbledon Park; 3
+Wimbledon; 3
+West Kensington; 2
+Barons Court; 2
+Hammersmith; 2
+Ravenscourt Park; 2
+Stamford Brook; 2
+Turnham Green; 2 + 3
+Gunnersbury; 3
+Kew Gardens; 3 + 4
+Richmond; 4
+Chiswick Park; 3
+Acton Town; 3
+Ealing Common; 3
+Ealing Broadway; 3
