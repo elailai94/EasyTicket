@@ -1,0 +1,18 @@
+Victoria
+16
+Brixton; 2
+Stockwell; 2
+Vauxhall; 1 + 2
+Pimlico; 1
+Victoria; 1
+Green Park; 1
+Oxford Circus; 1
+Warren Street; 1
+Euston; 1
+King's Cross; 1
+Highbury & Islington; 2
+Finsbury Park; 2
+Seven Sisters; 3
+Tottenham Hale; 3
+Blackhorse Road; 3
+Walthamstow Central; 3
