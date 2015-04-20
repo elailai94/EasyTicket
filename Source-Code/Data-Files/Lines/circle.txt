@@ -1,29 +1,37 @@
 Circle
-27
-Tower Hill
-Aldgate
-Liverpool Street
-Moorgate
-Barbican
-Farringdon
-King's Cross
-Euston Square
-Great Portland Street
-Baker Street
-Edgware Road
-Paddington
-Bayswater
-Notting Hill Gate
-High Street Kensington
-Gloucester Road
-South Kensington
-Sloane Square
-Victoria
-St.James's Park
-Westminster
-Embankment
-Temple
-Blackfriars
-Mansion House
-Cannon Street
-Monument
+35
+Tower Hill; 1
+Aldgate; 1
+Liverpool Street; 1
+Moorgate; 1
+Barbican; 1
+Farringdon; 1
+King's Cross; 1
+Euston Square; 1
+Great Portland Street; 1
+Baker Street; 1
+Edgware Road; 1
+Paddington; 1
+Royal Oak; 2
+Westbourne Park; 2
+Ladbroke Grove; 2
+Latimer Road; 2
+Wood Lane; 2
+Shepherd's Bush Market; 2
+Goldhawk Road; 2
+Hammersmith; 2
+Bayswater; 1
+Notting Hill Gate; 1 + 2
+High Street Kensington; 1
+Gloucester Road; 1
+South Kensington; 1
+Sloane Square; 1
+Victoria; 1
+St.James's Park; 1
+Westminster; 1
+Embankment; 1
+Temple; 1
+Blackfriars; 1
+Mansion House; 1
+Cannon Street; 1
+Monument; 1
