@@ -1,51 +1,51 @@
 Central
 49
-Epping
-Theydon Bois
-Debden
-Loughton
-Buckhurst Hill
-Grange Hill
-Chigwell
-Roding Valley
-Woodford
-South Woodford
-Snaresbrook
-Hainault
-Fairlop
-Barkingside
-Newbury Park
-Gants Hill
-Redbridge
-Wanstead
-Leytonstone
-Leyton
-Stratford
-Mile End
-Bethnal Green
-Liverpool Street
-Bank
-St.Paul's
-Chancery Lane
-Holborn
-Tottenham Court Road
-Oxford Circus
-Bond Street
-Marble Arch
-Lancaster Gate
-Queensway
-Notting Hill Gate
-Holland Park
-Shepherd's Bush
-White City
-East Acton
-North Acton
-West Acton
-Ealing Broadway
-Hanger Lane
-Perivale
-Greenford
-Northolt
-South Ruislip
-Ruislip Gardens
-West Ruislip
+Epping; 6
+Theydon Bois; 6
+Debden; 6
+Loughton; 6
+Buckhurst Hill; 5
+Grange Hill; 4
+Chigwell; 4
+Roding Valley; 4
+Woodford; 4
+South Woodford; 4
+Snaresbrook; 4
+Hainault; 4
+Fairlop; 4
+Barkingside; 4
+Newbury Park; 4
+Gants Hill; 4
+Redbridge; 4
+Wanstead; 4
+Leytonstone; 3 + 4
+Leyton; 3
+Stratford; 3
+Mile End; 2
+Bethnal Green; 2
+Liverpool Street; 1
+Bank; 1
+St.Paul's; 1
+Chancery Lane; 1
+Holborn; 1
+Tottenham Court Road; 1
+Oxford Circus; 1
+Bond Street; 1
+Marble Arch; 1
+Lancaster Gate; 1
+Queensway; 1
+Notting Hill Gate; 1 + 2
+Holland Park; 2
+Shepherd's Bush; 2
+White City; 2
+East Acton; 2
+North Acton; 2 + 3
+West Acton; 3
+Ealing Broadway; 3
+Hanger Lane; 3
+Perivale; 4
+Greenford; 4
+Northolt; 5
+South Ruislip; 5
+Ruislip Gardens; 5
+West Ruislip; 6
