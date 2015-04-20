@@ -1,23 +1,30 @@
 Hammersmith & City
-21
-Hammersmith
-Goldhawk Road
-Shepherd's Bush
-Latimer Road
-Ladbroke Grove
-Westbourne Park
-Royal Oak
-Paddington
-Edgware Road
-Baker Street
-Great Portland Street
-Euston Square
-King's Cross
-Farringdon
-Barbican
-Moorgate
-Liverpool Street
-Aldgate
-Tower Hill
-Aldgate East
-Whitechapel
+28
+Hammersmith; 2
+Goldhawk Road; 2
+Shepherd's Bush; 2
+Latimer Road; 2
+Ladbroke Grove; 2
+Westbourne Park; 2
+Royal Oak; 2
+Paddington; 1
+Edgware Road; 1
+Baker Street; 1
+Great Portland Street; 1
+Euston Square; 1
+King's Cross; 1
+Farringdon; 1
+Barbican; 1
+Moorgate; 1
+Liverpool Street; 1
+Aldgate East; 1
+Whitechapel; 2
+Stepney Green; 2
+Mile End; 2
+Bow Road; 2
+Bromley-by-Bow; 2 + 3
+West Ham; 3
+Plaistow; 3
+Upton Park; 3
+East Ham; 3 + 4
+Barking; 4
