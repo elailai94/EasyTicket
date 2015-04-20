@@ -1,0 +1,55 @@
+Piccadilly
+53
+Cockfosters; 5
+Oakwood; 5
+Southgate; 4
+Arnos Grove; 4
+Bounds Green; 3 + 4
+Wood Green; 3
+Turnpike Lane; 3
+Manor House; 2 + 3
+Finsbury Park; 2
+Arsenal; 2
+Holloway Road; 2
+Caledonian Road; 2
+King's Cross; 1
+Russell Square; 1
+Holborn; 1
+Covent Garden; 1
+Leicester Square; 1
+Piccadilly Circus; 1
+Green Park; 1
+Hyde Park Corner; 1
+Knightsbridge; 1
+South Kensington; 1
+Gloucester Road; 1
+Earl's Court; 1 + 2
+Barons Court; 2
+Hammersmith; 2
+Turnham Green; 2 + 3
+Acton Town; 3
+South Ealing; 3
+Northfields; 3
+Boston Manor; 4
+Osterley; 4
+Hounslow East; 4
+Hounslow Central; 4
+Hounslow West; 5
+Hatton Cross; 5 + 6
+Heathrow Terminal 4; 6
+Heathrow Terminals 1, 2, 3; 6
+Heathrow Terminal 5; 6
+Ealing Common; 3
+North Ealing; 3
+Park Royal; 3
+Alperton; 4
+Sudbury Town; 4
+Sudbury Hill; 4
+South Harrow; 5
+Rayners Lane; 5
+Eastcote; 5
+Ruislip Manor; 6
+Ruislip; 6
+Ickenham; 6
+Hillingdon; 6
+Uxbridge; 6
