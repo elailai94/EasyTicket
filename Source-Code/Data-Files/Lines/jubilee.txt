@@ -1,0 +1,29 @@
+Jubilee
+27
+Stanmore; 5
+Canons Park; 5
+Queensbury; 4
+Kingsbury; 4
+Wembley Park; 4
+Neasden; 3
+Dollis Hill; 3
+Willesden Green; 2 + 3
+Kilburn; 2
+West Hampstead; 2
+Finchley Road; 2
+Swiss Cottage; 2
+St.John's Wood; 2
+Baker Street; 1
+Bond Street; 1
+Green Park; 1
+Westminster; 1
+Waterloo; 1
+Southwark; 1
+London Bridge; 1
+Bermondsey; 2
+Canada Water; 2
+Canary Wharf; 2
+North Greenwich; 2 + 3
+Canning Town; 3
+West Ham; 3
+Stratford; 3
