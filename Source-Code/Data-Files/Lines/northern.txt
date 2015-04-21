@@ -1,0 +1,52 @@
+Northern
+50
+Morden; 4
+South Wimbledon; 3 + 4
+Colliers Wood; 3
+Tooting Broadway; 3
+Tooting Bec; 3
+Balham; 3
+Clapham South; 2 + 3
+Clapham Common; 2
+Clapham North; 2
+Stockwell; 2
+Oval; 2
+Kennington; 2
+Elephant & Castle; 1 + 2
+Borough; 1
+London Bridge; 1
+Bank; 1
+Moorgate; 1
+Old Street; 1
+Angel; 1
+King's Cross; 1
+Waterloo; 1
+Embankment; 1
+Charing Cross; 1
+Leicester Square; 1
+Tottenham Court Road; 1
+Goodge Street; 1
+Warren Street; 1
+Euston; 1
+Mornington Crescent; 2
+Camden Town; 2
+Kentish Town; 2
+Tufnell Park; 2
+Archway; 2 + 3
+Highgate; 3
+East Finchley; 3
+Finchley Central; 4
+Mill Hill East; 4
+West Finchley; 4
+Woodside Park; 4
+Totteridge & Whetstone; 4
+High Barnet; 5
+Chalk Farm; 2
+Belsize Park; 2
+Hampstead; 2 + 3
+Golders Green; 3
+Brent Cross; 3
+Hendon Central; 3 + 4
+Colindale; 4
+Burnt Oak; 4
+Edgeware; 5
