@@ -1,0 +1,36 @@
+Metropolitan
+34
+Aldgate; 1
+Liverpool Street; 1
+Moorgate; 1
+Barbican; 1
+Farringdon; 1
+King's Cross; 1
+Euston Square; 1
+Great Portland Street; 1
+Baker Street; 1
+Finchley Road; 2
+Wembley Park; 4
+Preston Road ; 4
+Northwick Park; 4
+Harrow-on-the-Hill; 5
+West Harrow; 5
+Rayners Lane; 5
+Eastcote; 5
+Ruislip Manor; 6
+Ruislip; 6
+Ickenham; 6
+Hillingdon; 6
+Uxbridge; 6
+North Harrow; 5
+Pinner; 5
+Northwood Hills; 6
+Northwood; 6
+Moor Park; 6 + 7
+Croxley; 7
+Watford; 7
+Rickmansworth; 7
+Chorleywood; 7
+Chalfont & Latimer; 8
+Chesham; 9
+Amersham; 9
