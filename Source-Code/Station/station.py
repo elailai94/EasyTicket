@@ -43,7 +43,7 @@ class Station:
     def __repr__(self):
     	zones_str = self.set_to_string(self.zones)
     	lines_str = self.set_to_string(self.lines)
-    	return 'Station Name:%s  Is Open?:%r  Zones:%d  Lines:%s' \
+    	return 'Station Name:%s  Is Open?:%r  Zones:%s  Lines:%s' \
                % (self.name, self.is_open, zones_str, lines_str)
 
     # Returns True if self and other represent stations with the same name
