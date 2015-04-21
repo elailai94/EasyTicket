@@ -33,10 +33,10 @@ class Station:
     	ret_str = ''
     	# Concatenates all items in the set s into one string
         for item in s:
-        	ret_str += str(item)
-        	if (i < (len(s) - 1)):
-        		ret_str += ', '
-        	i += 1
+            ret_str += str(item)
+            if (i < (len(s) - 1)):
+        	ret_str += ', '
+            i += 1
         return ret_str
 
     # Returns a string representation of the object.
