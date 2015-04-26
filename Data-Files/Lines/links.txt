@@ -1,0 +1,74 @@
+73
+Harrow & Wealdstone; Kenton; 1.74
+Kenton; South Kenton; 1.40
+South Kenton; North Wembley; 0.90
+North Wembley; Wembley Central; 1.27
+Wembley Central; Stonebridge Park; 1.71
+Stonebridge Park; Harlesden; 1.53
+Harlesden; Willesden Junction; 1.05
+Willesden Junction; Kensal Green; 1.50
+Kensal Green; Queen's Park; 1.32
+Queen's Park; Kilburn Park; 0.79
+Kilburn Park; Maida Vale; 0.88
+Maida Vale; Warwick Avenue; 0.79
+Warwick Avenue; Paddington; 0.88
+Paddington; Edgware Road; 0.72
+Edgware Road; Marylebone; 0.45
+Marylebone; Baker Street; 0.50
+Baker Street; Regent's Park; 0.88
+Regent's Park; Oxford Circus; 0.87
+Oxford Circus; Piccadilly Circus; 0.97
+Piccadilly Circus; Charing Cross; 0.55
+Charing Cross; Embankment; 0.37
+Embankment; Waterloo; 0.71
+Waterloo; Lambeth North; 0.63
+Lambeth North; Elephant & Castle; 0.82
+West Ruislip; Ruislip Gardens; 2.04
+Ruislip Gardens; South Ruislip; 0.86
+South Ruislip; Northolt; 2.28
+Northolt; Greenford; 1.78
+Greenford; Perivale; 1.69
+Perivale; Hanger Lane; 2.10
+Hanger Lane; North Acton; 2.49
+Ealing Broadway; West Acton; 1.53
+West Acton; North Acton; 1.77
+North Acton; East Acton; 1.11
+East Acton; White City; 2.06
+White City; Shepherd's Bush; 1.16
+Shepherd's Bush; Holland Park; 0.87
+Holland Park; Notting Hill Gate; 0.61
+Notting Hill Gate; Queensway; 0.69
+Queensway; Lancaster Gate; 0.90
+Lancaster Gate; Marble Arch; 1.20
+Marble Arch; Bond Street; 0.55
+Bond Street; Oxford Circus; 0.66
+Oxford Circus; Tottenham Court Road; 0.58
+Tottenham Court Road; Holborn; 0.88
+Holborn; Chancery Lane; 0.40
+Chancery Lane; St.Paul's; 1.03
+St.Paul's; Bank; 0.74
+Bank; Liverpool Street; 0.74
+Liverpool Street; Bethnal Green; 2.27
+Bethnal Green; Mile End; 1.64
+Mile End; Stratford; 2.83
+Stratford; Leyton; 2.09
+Leyton; Leytonstone; 1.62
+Leytonstone; Wanstead; 1.72
+Wanstead; Redbridge; 1.22
+Redbridge; Gants Hill; 1.27
+Gants Hill; Newbury Park; 2.36
+Newbury Park; Barkingside; 1.11
+Barkingside; Fairlop; 1.22
+Fairlop; Hainault; 0.75
+Leytonstone; Snaresbrook; 1.57
+Snaresbrook; South Woodford; 1.29
+South Woodford; Woodford; 1.80
+Roding Valley; Woodford; 1.33
+Chigwell; Roding Valley; 2.28
+Grange Hill; Chigwell; 1.32
+Hainault; Grange Hill; 1.12
+Woodford; Buckhurst Hill; 2.31
+Buckhurst Hill; Loughton; 1.83
+Loughton; Debden; 2.02
+Debden; Theydon Bois; 3.34
+Theydon Bois; Epping; 2.54
