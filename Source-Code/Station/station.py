@@ -11,6 +11,7 @@
 # Object definition
 class Station:
 
+
     'Fields: name, is_open, zones, lines'
     # A Station is an object in which:
     # - name is a Str (name of this station)
