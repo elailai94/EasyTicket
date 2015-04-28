@@ -45,9 +45,9 @@ class Station:
     	i = 0
         for item in s:
             ret_str += str(item)
-        	if (i < (len(s) - 1)):
-        	    ret_str += ', '
-        	i += 1
+            if (i < (len(s) - 1)):
+                ret_str += ', '
+            i += 1
         return ret_str
 
 
