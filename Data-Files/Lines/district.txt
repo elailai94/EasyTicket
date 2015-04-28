@@ -1,5 +1,5 @@
 District
-59
+60
 Upminster; 6
 Upminster Bridge; 6
 Hornchurch; 6
@@ -38,6 +38,7 @@ Bayswater; 1
 Notting Hill Gate; 1 + 2
 High Street Kensington; 1
 Earl's Court; 1 + 2
+Kensington; 2
 West Brompton; 2
 Fulham Broadway; 2
 Parsons Green; 2
