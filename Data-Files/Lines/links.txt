@@ -1,4 +1,4 @@
-73
+151
 Harrow & Wealdstone; Kenton; 1.74
 Kenton; South Kenton; 1.40
 South Kenton; North Wembley; 0.90
@@ -72,3 +72,81 @@ Buckhurst Hill; Loughton; 1.83
 Loughton; Debden; 2.02
 Debden; Theydon Bois; 3.34
 Theydon Bois; Epping; 2.54
+Edgware Road; Paddington; 0.82
+Paddington; Bayswater; 0.98
+Bayswater; Notting Hill Gate; 0.79
+Notting Hill Gate; High Street Kensington; 0.93
+High Street Kensington; Gloucester Road; 0.93
+Gloucester Road; South Kensington; 0.74
+South Kensington; Sloane Square; 1.22
+Sloane Square; Victoria; 1.05
+Victoria; St.James's Park; 0.72
+St.James's Park; Westminster; 0.76
+Westminster; Embankment; 0.69
+Embankment; Temple; 0.71
+Temple; Blackfriars; 0.76
+Blackfriars; Mansion House; 0.61
+Mansion House; Cannon Street; 0.31
+Cannon Street; Monument; 0.34
+Monument; Tower Hill; 0.68
+Tower Hill; Aldgate; 0.50
+Aldgate; Liverpool Street; 0.61
+Liverpool Street; Moorgate; 0.51
+Moorgate; Barbican; 0.64
+Barbican; Farringdon; 0.51
+Farringdon; King's Cross; 1.85
+King's Cross; Euston Square; 0.85
+Euston Square; Great Portland Street; 0.61
+Great Portland Street; Baker Street; 0.92
+Baker Street; Edgware Road; 0.72
+Upminster; Upminster Bridge; 1.24
+Upminster Bridge; Hornchurch; 1.26
+Hornchurch; Elm Park; 1.50
+Elm Park; Dagenham East; 2.37
+Dagenham East; Dagenham Heathway; 1.35
+Dagenham Heathway; Becontree; 1.37
+Becontree; Upney; 1.87
+Upney; Barking; 1.38
+Barking; East Ham; 2.29
+East Ham; Upton Park; 1.40
+Upton Park; Plaistow; 1.29
+Plaistow; West Ham; 0.76
+West Ham; Bromley-by-Bow; 1.37
+Bromley-by-Bow; Bow Road; 1.01
+Bow Road; Mile End; 0.55
+Mile End; Stepney Green; 1.05
+Stepney Green; Whitechapel; 1.00
+Whitechapel; Aldgate East; 0.82
+Aldgate East; Tower Hill; 0.80
+Gloucester Road; Earl's Court; 0.93
+High Street Kensington; Earl's Court; 1.26
+Earl's Court; Kensington; 1.54
+Earl's Court; West Brompton; 0.60
+West Brompton; Fulham Broadway; 0.84
+Fulham Broadway; Parsons Green; 0.79
+Parsons Green; Putney Bridge; 0.95
+Putney Bridge; East Putney; 1.11
+East Putney; Southfields; 1.53
+Southfields; Wimbledon Park; 1.45
+Wimbledon Park; Wimbledon; 1.50
+Earl's Court; West Kensington; 0.90
+West Kensington; Barons Court; 0.64
+Barons Court; Hammersmith; 0.68
+Hammersmith; Ravenscourt Park; 0.93
+Ravenscourt Park; Stamford Brook; 0.77
+Stamford Brook; Turnham Green; 0.55
+Turnham Green; Chiswick Park; 0.95
+Chiswick Park; Acton Town; 1.22
+Acton Town; Ealing Common; 1.03
+Ealing Common; Ealing Broadway; 1.50
+Turnham Green; Gunnersbury; 1.59
+Gunnersbury; Kew Gardens; 1.71
+Kew Gardens; Richmond; 2.14
+New Cross; Surrey Quays; 2.27
+New Cross Gate; Surrey Quays; 2.04
+Surrey Quays; Canada Water; 0.55
+Canada Water; Rotherhithe; 0.32
+Rotherhithe; Wapping; 0.51
+Wapping; Shadwell; 0.77
+Shadwell; Whitechapel; 0.98
+Whitechapel; Shoreditch; 0.72
