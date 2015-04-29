@@ -1,4 +1,4 @@
-204
+310
 Harrow & Wealdstone; Kenton; 1.74
 Kenton; South Kenton; 1.40
 South Kenton; North Wembley; 0.90
@@ -270,3 +270,42 @@ Osterley; Boston Manor; 2.42
 Boston Manor; Northfields; 0.99
 Northfields; South Ealing; 0.38
 South Ealing; Acton Town; 2.20
+Acton Town; Turnham Green; 2.60
+Turnham Green; Hammersmith; 1.82
+Hammersmith; Barons Court; 0.68
+Barons Court; Earls Court; 1.62
+South Kensington; Knightsbridge; 1.22
+Knightsbridge; Hyde Park Corner; 0.51
+Hyde Park Corner; Green Park; 1.06
+Green Park; Piccadilly Circus; 0.56
+Piccadilly Circus; Leicester Square; 0.49
+Leicester Square; Covent Garden; 0.25
+Covent Garden; Holborn; 0.59
+Holborn; Russell Square; 0.72
+Russell Square; King's Cross; 0.91
+King's Cross; Caledonian Road; 1.96
+Caledonian Road; Holloway Road; 0.59
+Holloway Road; Arsenal; 0.74
+Arsenal; Finsbury Park; 0.69
+Finsbury Park; Manor House; 1.04
+Manor House; Turnpike Lane; 2.31
+Turnpike Lane; Wood Green; 0.98
+Wood Green; Bounds Green; 1.52
+Bounds Green; Arnos Grove; 1.25
+Arnos Green; Southgate; 1.94
+Southgate; Oakwood; 1.86
+Oakwood; Cockfosters; 1.27
+Walthamstow Central; Blackhorse Road; 1.45
+Blackhorse Road; Tottenham Hale; 1.37
+Tottenham Hale; Seven Sisters; 1.05
+Seven Sisters; Finsbury Park; 3.15
+Finsbury Park; Highbury & Islington; 1.93
+Highbury & Islington; King's Cross; 2.45
+Warren Street; Oxford Circus; 0.90
+Oxford Circus; Green Park; 1.14
+Green Park; Victoria; 1.09
+Victoria; Pimlico; 1.19
+Pimlico; Vauxhall; 0.80
+Vauxhall; Stockwell; 1.77
+Stockwell; Brixton; 1.46
+Waterloo; Bank; 2.37
