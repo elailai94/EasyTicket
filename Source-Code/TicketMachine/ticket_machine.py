@@ -20,8 +20,8 @@ class TicketMachine(object):
     # Instantiates the object. 
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, 'self'):
-    	      cls.self = object.__new__(cls)
-    	  return cls.self
+    	    cls.self = object.__new__(cls)
+    	return cls.self
 
 
     # Initializes the object.
@@ -34,5 +34,5 @@ class TicketMachine(object):
 
     # Initiates a new session.
     def new_session(self):
-    	  isinstance(self, TicketMachine)
+    	isinstance(self, TicketMachine)
         self.__current_session = Session(self.__network)
