@@ -1,4 +1,4 @@
-151
+204
 Harrow & Wealdstone; Kenton; 1.74
 Kenton; South Kenton; 1.40
 South Kenton; North Wembley; 0.90
@@ -150,3 +150,123 @@ Rotherhithe; Wapping; 0.51
 Wapping; Shadwell; 0.77
 Shadwell; Whitechapel; 0.98
 Whitechapel; Shoreditch; 0.72
+Liverpool Street; Aldgate East; 0.92
+Stanmore; Canons Park; 1.27
+Canons Park; Queensbury; 1.71
+Queensbury; Kingsbury; 1.33
+Kingsbury; Wembley Park; 2.85
+Wembley Park; Neasden; 2.28
+Neasden; Dollis Hill; 0.85
+Dollis Hill; Willesden Green; 1.21
+Willesden Green; Kilburn; 1.19
+Kilburn; West Hampstead; 1.09
+West Hampstead; Finchley Road; 0.61
+Finchley Road; Swiss Cottage; 0.61
+Swiss Cottage; St.John's Wood; 0.92
+St.John's Wood; Baker Street; 2.06
+Baker Street; Bond Street; 1.66
+Bond Street; Green Park; 1.37
+Green Park; Westminster; 1.34
+Westminster; Waterloo; 0.96
+Waterloo; Southwark; 0.44
+Southwark; London Bridge; 1.26
+London Bridge; Bermondsey; 1.93
+Bermondsey; Canada Water; 1.06
+Canada Water; Canary Wharf; 2.41
+Canary Wharf; North Greenwich; 1.71
+North Greenwich; Canning Town; 1.71
+Canning Town; West Ham; 1.58
+West Ham; Stratford; 1.54
+Baker Street; Finchley Road; 3.38
+Finchley Road; Wembley Park; 7.24
+Wembley Park; Preston Road; 1.46
+Preston Road; Northwick Park; 1.64
+Northwick Park; Harrow-on-the-Hill; 1.29
+Harrow-on-the-Hill; West Harrow; 1.26
+West Harrow; Rayners Lane; 1.38
+Rayners Lane; Eastcote; 1.72
+Eastcote; Ruislip Manor; 1.14
+Ruislip Manor; Ruislip; 0.72
+Ruislip; Ickenham; 1.85
+Ickenham; Hillingdon; 1.08
+Hillingdon; Uxbridge; 2.03
+Harrow-on-the-Hill; North Harrow; 2.00
+North Harrow; Pinner; 1.48
+Pinner; Northwood Hills; 2.08
+Northwood Hills; Northwood; 1.61
+Northwood; Moor Park; 2.22
+Moor Park; Croxley; 2.94
+Croxley; Watford; 1.90
+Moor Park; Rickmansworth; 3.49
+Rickmansworth; Chorleywood; 3.38
+Chorleywood; Chalfont & Latimer; 3.43
+Chalfont & Latimer; Chesham; 6.19
+Chalfont & Latimer; Amersham; 3.27
+Edgware; Burnt Oak; 1.47
+Burnt Oak; Colindale; 1.31
+Colindale; Hendon Central; 2.10
+Hendon Central; Brent Cross; 1.10
+Brent Cross; Golders Green; 1.55
+Golders Green; Hampstead; 2.34
+Hampstead; Belsize Park; 1.20
+Belsize Park; Chalk Farm; 1.10
+Chalk Farm; Camden Town; 0.85
+High Barnet; Totteridge & Whetstone; 2.46
+Totteridge & Whetstone; Woodside Park; 1.50
+Woodside Park; West Finchley; 0.98
+West Finchley; Finchley Central; 1.14
+Mill Hill East; Finchley Central; 1.52
+Finchley Central; East Finchley; 2.42
+East Finchley; Highgate; 1.63
+Highgate; Archway; 1.70
+Archway; Tufnell Park; 0.88
+Tufnell Park; Kentish Town; 0.80
+Kentish Town; Camden Town; 1.15
+Camden Town; Mornington Crescent; 0.64
+Mornington Crescent; Euston; 0.82
+Euston; Warren Street; 0.58
+Warren Street; Goodge Street; 0.46
+Goodge Street; Tottenham Court Road; 0.62
+Tottenham Court Road; Leicester Square; 0.40
+Leicester Square; Charing Cross; 0.46
+Charing Cross; Embankment; 0.27
+Embankment; Waterloo; 0.70
+Waterloo; Kennington; 1.89
+Camden Town; Euston; 1.71
+Euston; King's Cross; 0.61
+King's Cross; Angel; 1.38
+Angel; Old Street; 1.44
+Old Street; Moorgate; 0.69
+Moorgate; Bank; 0.82
+Bank; London Bridge; 0.69
+London Bridge; Borough; 0.67
+Borough; Elephant & Castle; 0.85
+Elephant & Castle; Kennington; 0.90
+Kennington; Oval; 0.82
+Oval; Stockwell; 1.36
+Stockwell; Clapham North; 0.82
+Clapham North; Clapham Common; 0.62
+Clapham Common; Clapham South; 1.25
+Clapham South; Balham; 1.15
+Balham; Tooting Bec; 0.98
+Tooting Bec; Tooting Broadway; 1.10
+Tooting Broadway; Colliers Wood; 1.20
+Colliers Wood; South Wimbledon; 1.14
+South Wimbledon; Morden; 1.46
+Rayners Lane; South Harrow; 1.89
+South Harrow; Sudbury Hill; 1.36
+Sudbury Hill; Sudbury Town; 1.65
+Sudbury Town; Alperton; 1.57
+Alperton; Park Royal; 1.97
+Park Royal; North Ealing; 1.06
+North Ealing; Ealing Common; 0.94
+Ealing Common; Acton Town; 1.03
+Heathrow Terminals 1, 2, 3; Hatton Cross; 2.15
+Hatton Cross; Hounslow West; 2.91
+Hounslow West; Hounslow Central; 1.46
+Hounslow Central; Hounslow East; 0.74
+Hounslow East; Osterley; 0.96
+Osterley; Boston Manor; 2.42
+Boston Manor; Northfields; 0.99
+Northfields; South Ealing; 0.38
+South Ealing; Acton Town; 2.20
