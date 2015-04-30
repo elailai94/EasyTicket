@@ -46,11 +46,19 @@ class TicketMachine(object):
     	self.__amt_of_money_collected = 0.0
     	self.__num_of_tickets_issued = 0
     	self.__current_session = None
+        self.__current_session_journey_fare = 0.0
 
     # Initiates a new session.
     def start_session(self):
     	isinstance(self, TicketMachine)
         self.__current_session = Session(self.__network)
+
+
+    # Returns True if station is in the network for the current
+    # session (if any). Otherwise, False is return.
+    def is_in_network(self, station):
+        isinstance(self, TicketMachine)
+        return self.__network.is_in_network(station)
 
 
     # Sets the origin station for the current session (if any).
@@ -72,7 +80,9 @@ class TicketMachine(object):
     def calculate_journey_fare(self):
     	isinstance(self, TicketMachine)
         if self.__current_session != None:
-        	return self.__current_session.calculate_journey_fare()
+            journey_fare = self.__current_session.calculate_journey_fare()
+            self.__current_session_journey_fare = journey_fare
+            return journey_fare
 
 
     # Pays for the journey fare for the current session (if any).
@@ -82,12 +92,28 @@ class TicketMachine(object):
     		self.__current_session.pay_journey_fare(float(amount))
 
 
+    # Returns the amount of fare paid for the current session (if any).
+    def refund_amount_of_fare_paid(self):
+        isinstance(self, TicketMachine)
+        if self.__current_session != None:
+            return self.__current_session.refund_amount_of_fare_paid()
+
+
     # Returns True if the journey fare for the current session (if any)
     # has been paid in full. Otherwise, False is return.
     def is_journey_fare_paid(self):
         isinstance(self, TicketMachine)
         if self.__current_session != None:
             return self.__current_session.is_journey_fare_paid()
+
+
+    # Returns the remaining amount of fare to be paid for the current
+    # session (if any).
+    def get_remaining_fare_to_be_paid(self):
+        isinstance(self, TicketMachine)
+        if self.__current_session != None:
+            return self.__current_session.get_remaining_fare_to_be_paid()
+
 
     # Prints the ticket for the current session (if any).
     def print_ticket(self):
@@ -103,8 +129,14 @@ class TicketMachine(object):
             return self.__current_session.return_change()
 
 
-    # Ends the current session.
-    def end_session(self):
+    # Ends the current session (if any).
+    #   Note: The kind parameter indicates the kind of session ending.
+    #         - 'c' for session cancellation
+    #         - 'e' for normal session ending 
+    def end_session(self, kind = 'e'):
     	isinstance(self, TicketMachine)
-    	self.__num_of_tickets_issued += 1
+        if kind == 'e':
+            self.__amt_of_money_collected += self.__current_session_journey_fare
+            self.__num_of_tickets_issued += 1
     	self.__current_session = None
+        self.__current_session_journey_fare == 0.0
