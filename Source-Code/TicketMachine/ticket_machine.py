@@ -15,7 +15,7 @@ from session import Session
 class TicketMachine(object):
 	
 
-    'Fields: network, amt_of_money_collected, num_of_tickets_issued, current_session'
+    'Fields: network, amt_of_money_collected, num_of_tickets_issued, current_session, current_session_journey_fare'
     # A TicketMachine is an object in which:
     # - network is a Network (network)
     # - amt_of_money_collected is a Float (amount of money collected on
@@ -24,6 +24,8 @@ class TicketMachine(object):
     #   this ticket machine)
     # - current_session is a Session (current session in progress on
     #   this ticket machine)
+    # - current_session_journey_fare is a Float (calculated journey fare
+    #   for the current session in progress on this ticket machine)
 
 
     # Instantiates the object. 
@@ -35,8 +37,9 @@ class TicketMachine(object):
 
     # Returns a string representation of the object.
     def __repr__(self):
-        return 'Amount of Money Collected:%.2f  Number of Tickets Issued:%d\nCurrent Session:%r' \
-               % (self.__amt_of_money_collected, self.__num_of_tickets_issued, self.__current_session) 
+        return 'Amount of Money Collected:%.2f  Number of Tickets Issued:%d\nCurrent Session:%r\nCurrent Session Journey Fare:%.2f' \
+               % (self.__amt_of_money_collected, self.__num_of_tickets_issued, \
+               self.__current_session, self.__current_session_journey_fare) 
 
 
     # Initializes the object.
