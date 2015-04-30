@@ -17,8 +17,8 @@ class Station:
     # - name is a Str (name of this station)
     # - is_open is a Bool (status indicating whether this station is
     #	open/close)
-    # - zones is a (listof Int) (fare zones that this station is part of)
-    # - lines is a (listof Str) (lines that this station is part of)
+    # - zones is a (setof Int) (fare zones that this station is part of)
+    # - lines is a (setof Str) (lines that this station is part of)
 
 
     # Initializes the object.
@@ -45,10 +45,10 @@ class Station:
     	# Concatenates all items in the set s into one string
     	i = 0
         for item in s:
-            ret_str += str(item)
-            if (i < (len(s) - 1)):
-                ret_str += ', '
-            i += 1
+        	ret_str += str(item)
+        	if (i < (len(s) - 1)):
+        		ret_str += ', '
+        	i += 1
         return ret_str
 
 
