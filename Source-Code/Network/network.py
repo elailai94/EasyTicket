@@ -92,7 +92,7 @@ class Network:
             	new_station.add_line(line_name)
             	station_zones = station_info[1].split('+')
                 for zone in station_zones:
-                	new_station.add_zone(int(zone.strip()))
+                    new_station.add_zone(int(zone.strip()))
                 self.__network[station_name] = (new_station, {})
                 self.__num_of_stations += 1
             else:
@@ -112,12 +112,12 @@ class Network:
     	# from file_name
     	i = 0
     	while i < num_of_links:
-    		link_info = input_file.readline().strip().split(';')
-    		station_a = link_info[0].strip()
-    		station_b = link_info[1].strip()
-    		link_distance = float(link_info[2].strip())
-    		self.__add_link(station_a, station_b, link_distance)
-    		i += 1
+    	    link_info = input_file.readline().strip().split(';')
+    	    station_a = link_info[0].strip()
+    	    station_b = link_info[1].strip()
+    	    link_distance = float(link_info[2].strip())
+    	    self.__add_link(station_a, station_b, link_distance)
+    	    i += 1
 
     	input_file.close()
 
