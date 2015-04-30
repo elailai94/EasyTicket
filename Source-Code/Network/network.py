@@ -32,7 +32,7 @@ class Network:
 
     # A distancedict is a dictionary where:
     # - the keys are Str values
-    # - the values themselves are Int values
+    # - the values themselves are Float values
 
 
     # Initializes the object.
@@ -44,22 +44,24 @@ class Network:
 
     # Returns a string representation of the object.
     def __repr__(self):
-    	return 'Number of Stations:%d  Number of Links:%d  Network:%r' \
+    	return 'Number of Stations:%d  Number of Links:%d\nNetwork:%r' \
     	       % (self.__num_of_stations, self.__num_of_links, self.__network)
 
-    # Builds network field from data files.
+
+    # Builds the network from data files.
     def build_network(self):
+    	isinstance(self, Network)
     	self.__import_lines()
     	self.__import_links()
 
 
-    # Imports lines into network field from data file.
+    # Imports lines into the network from data file.
     def __import_lines(self, file_name = 'lines.txt'):
         input_file = file(file_name, 'r')
         # Stores the number of lines
         num_of_lines = int(input_file.readline().strip())
         
-        # Imports information for each line into network field
+        # Imports information for each line into the network
         # from file_name  
         i = 0
         while i < num_of_lines:
@@ -70,7 +72,7 @@ class Network:
         input_file.close()
 
 
-    # Imports stations into network field from data file.
+    # Imports stations into the network from data file.
     def __import_stations(self, file_name):
     	input_file = file(file_name, 'r')
     	# Stores the name of the line
@@ -78,7 +80,7 @@ class Network:
     	# Stores the number of stations in the line
     	num_of_stations = int(input_file.readline().strip())
     	
-    	# Imports information for each station into network field
+    	# Imports information for each station into the network
     	# from file_name
     	i = 0
     	while i < num_of_stations:
@@ -90,7 +92,7 @@ class Network:
             	new_station.add_line(line_name)
             	station_zones = station_info[1].split('+')
                 for zone in station_zones:
-                    new_station.add_zone(int(zone.strip()))
+                	new_station.add_zone(int(zone.strip()))
                 self.__network[station_name] = (new_station, {})
                 self.__num_of_stations += 1
             else:
@@ -100,30 +102,29 @@ class Network:
     	input_file.close()
 
 
-    # Imports links into network field from data file.
+    # Imports links into the network from data file.
     def __import_links(self, file_name = 'links.txt'):
     	input_file = file(file_name, 'r')
     	# Stores the number of links
     	num_of_links = int(input_file.readline().strip())
 
-    	# Imports information for each link into network field
+    	# Imports information for each link into the network
     	# from file_name
     	i = 0
     	while i < num_of_links:
-    	    link_info = input_file.readline().strip().split(';')
-    	    station_a = link_info[0].strip()
-    	    station_b = link_info[1].strip()
-    	    link_distance = float(link_info[2].strip())
-    	    self.__add_link(station_a, station_b, link_distance)
-    	    i += 1
+    		link_info = input_file.readline().strip().split(';')
+    		station_a = link_info[0].strip()
+    		station_b = link_info[1].strip()
+    		link_distance = float(link_info[2].strip())
+    		self.__add_link(station_a, station_b, link_distance)
+    		i += 1
 
     	input_file.close()
 
 
-    # Adds a link between station_a and station_b in the network field
+    # Adds a link between station_a and station_b in the network
     # and labels the link with distance between the two stations.
     def __add_link(self, station_a, station_b, distance):
-    	isinstance(self, Network)
     	if station_a in self.__network and\
     	   station_b in self.__network and\
     	   (station_a != station_b):
@@ -131,16 +132,18 @@ class Network:
     	    self.__network[station_b][1][station_a] = distance
     	    self.__num_of_links += 1
 
+
     # Returns True if station is in the network. Otherwise, False is
-    # returned.
+    # return.
     def is_in_network(self, station):
     	isinstance(self, Network)
     	return station in self.__network
 
 
     # Finds the shortest path between station_a and station_b in the
-    # network field.
+    # network.
     def find_shortest_path(self, station_a, station_b, visited = [], distances = {}, predecessors = {}):
+    	isinstance(self, Network)
     	if station_a in self.__network and\
     	   station_b in self.__network:
             # Returns the path to station_b
@@ -154,7 +157,7 @@ class Network:
             # Checks if it's the first time through and sets current
             # distance to zero
             if not visited: 
-        	distances[station_a] = 0
+        	    distances[station_a] = 0
             
             # Processes neighbours and keeps track of predecessors
             for neighbour in self.__network[station_a][1]:
