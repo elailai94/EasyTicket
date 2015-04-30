@@ -73,7 +73,7 @@ class TicketMachine(object):
     def set_destination_station(self, station):
     	isinstance(self, TicketMachine)
     	if self.__current_session != None:
-    		self.__current_session.set_destination_station(station)
+    	    self.__current_session.set_destination_station(station)
 
 
     # Calculates the journey fare for the current session (if any).
@@ -89,7 +89,7 @@ class TicketMachine(object):
     def pay_journey_fare(self, amount):
     	isinstance(self, TicketMachine)
     	if self.__current_session != None:
-    		self.__current_session.pay_journey_fare(float(amount))
+    	    self.__current_session.pay_journey_fare(float(amount))
 
 
     # Returns the amount of fare paid for the current session (if any).
@@ -119,7 +119,7 @@ class TicketMachine(object):
     def print_ticket(self):
     	isinstance(self, TicketMachine)
     	if self.__current_session != None:
-    		self.__current_session.print_ticket()
+    	    self.__current_session.print_ticket()
 
 
     # Returns change for the current session (if any).
