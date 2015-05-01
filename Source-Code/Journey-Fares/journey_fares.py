@@ -3,7 +3,7 @@
 #
 # @description: Module for providing methods to work with JourneyFares objects
 # @author: Elisha Lai
-# @version: 1.4 30/04/2015
+# @version: 1.1 30/04/2015
 #==============================================================================
 
 # Journey fares module (journey_fares.py)
@@ -25,8 +25,8 @@ class JourneyFares:
 
     # Initializes the object.
     def __init__(self):
-	      self.__num_of_fare_tiers = 0
-	      self.__journey_fares = {}
+	self.__num_of_fare_tiers = 0
+	self.__journey_fares = {}
 
     
     # Returns a string representation of the object.
@@ -46,11 +46,11 @@ class JourneyFares:
         # field from file_name
     	i = 0
     	while i < num_of_fare_tiers:
-    		fare_tier_info = input_file.readline().strip().split(';')
-    		fare_tier_name = fare_tier_info[0].strip()
-    		fare_tier_fare = fare_tier_info[1].strip()
-    		self.__journey_fares[fare_tier_name] = round(float(fare_tier_fare), 2)
-    		i += 1
+    	    fare_tier_info = input_file.readline().strip().split(';')
+    	    fare_tier_name = fare_tier_info[0].strip()
+    	    fare_tier_fare = fare_tier_info[1].strip()
+    	    self.__journey_fares[fare_tier_name] = round(float(fare_tier_fare), 2)
+    	    i += 1
 
     	input_file.close()
 
