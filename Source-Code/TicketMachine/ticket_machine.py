@@ -85,7 +85,6 @@ class TicketMachine(object):
         if self.__current_session != None:
             journey_fare = self.__current_session.calculate_journey_fare()
             self.__current_session_journey_fare = journey_fare
-            return journey_fare
 
 
     # Pays for the journey fare for the current session (if any).
