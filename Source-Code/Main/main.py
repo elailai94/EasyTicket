@@ -34,18 +34,18 @@ def main():
         while True:
             origin_station = raw_input(origin_station_prompt)
             if ticket_machine.is_in_network(origin_station):
+            	ticket_machine.set_origin_station(origin_station)
                 break
             print invalid_station_msg
-        ticket_machine.set_origin_station(origin_station)
-	
+        
         # Reads in destination station from standard input until it's
         # a valid station.
         while True:
 	    destination_station = raw_input(destination_station_prompt)
 	    if ticket_machine.is_in_network(destination_station):
+	    	ticket_machine.set_destination_station(destination_station)
 	        break
 	    print invalid_station_msg
-        ticket_machine.set_destination_station(destination_station)
     
         ticket_machine.calculate_journey_fare()
 
