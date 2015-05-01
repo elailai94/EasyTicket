@@ -8,6 +8,7 @@
 
 # Main Program (main.py)
 
+import sys
 import Tkinter
 from ticket_machine import TicketMachine
 
@@ -24,6 +25,8 @@ change_notification_msg = 'Your change is: '
 change_collection_msg = 'Please collect your change.'
 thank_you_msg = 'Thank you for using the London Underground!'
 
+
+# Runs the command-line version of the system.
 def main():
     # Creates a ticket machine object.
     ticket_machine = TicketMachine()
@@ -103,5 +106,22 @@ def main():
         	break
 
 
+# Runs the graphical version of the system.
+def graphical_version():
+	pass
+
+
 if __name__ == '__main__':
-    main()
+   # Indicates whether graphical version of the system is run.
+   run_graphical_version = True
+
+   # Processes all optional argument specified at the command-line.
+   for arg in sys.argv[1:]:
+   	   if arg == '-text':
+   	   	run_graphical_version = False
+   
+   if run_graphical_version:
+   	   graphical_version()
+   else:
+       command_line_version()
+   
