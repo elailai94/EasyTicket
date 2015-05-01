@@ -78,7 +78,7 @@ class Session:
                     journey_fare = self.__journey_fares.lookup_fare('Tier 1')
                 else:
                     journey_fare = self.__journey_fares.lookup_fare('Tier 2')
-            if min_zone_visited >= 2:
+            elif min_zone_visited >= 2:
                 if max_zone_visited <= 4:
                     journey_fare = self.__journey_fares.lookup_fare('Tier 1')
                 elif max_zone_visited <= 7:
