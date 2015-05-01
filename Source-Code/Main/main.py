@@ -30,14 +30,14 @@ def main():
 
     while True:
     	try:
-    	    cancel_session = False
             ticket_machine.start_session()
+            cancel_session = False
 	
             # Reads in origin station from standard input until it's a
             # valid station.
             while True:
                 origin_station = raw_input(origin_station_prompt)
-                if origin_station == 'x':
+                if origin_station == 'x': # Cancel session?
             	    cancel_session = True
             	    break
                 elif ticket_machine.is_in_network(origin_station):
@@ -51,7 +51,7 @@ def main():
                 # a valid station.
                 while True:
 	            destination_station = raw_input(destination_station_prompt)
-	            if destination_station == 'x':
+	            if destination_station == 'x': # Cancel session?
 	    	        cancel_session = True
 	    	        break
 	            elif ticket_machine.is_in_network(destination_station):
@@ -69,7 +69,7 @@ def main():
     	            owing_amount = ticket_machine.get_remaining_fare_to_be_paid()
     	            print journey_fare_msg + u'\xA3' +'%.2f' % (owing_amount)
     	            payment_amount = raw_input(payment_prompt)
-    	            if payment_amount == 'x':
+    	            if payment_amount == 'x': # Cancel session?
     	                refund_amount = ticket_machine.refund_amount_of_fare_paid()
     	                if refund_amount > 0.005: # Refund available?
     	        	    print refund_notification_msg + u'\xA3' + '%.2f' % (refund_amount)
