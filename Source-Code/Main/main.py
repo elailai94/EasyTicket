@@ -27,7 +27,7 @@ thank_you_msg = 'Thank you for using the London Underground!'
 
 
 # Runs the command-line version of the system.
-def main():
+def command_line_version():
     # Creates a ticket machine object.
     ticket_machine = TicketMachine()
 
@@ -112,16 +112,15 @@ def graphical_version():
 
 
 if __name__ == '__main__':
-   # Indicates whether graphical version of the system is run.
-   run_graphical_version = True
+    # Indicates whether graphical version of the system is run.
+    run_graphical_version = True
 
-   # Processes all optional argument specified at the command-line.
-   for arg in sys.argv[1:]:
-   	   if arg == '-text':
-   	   	run_graphical_version = False
+    # Processes all optional argument specified at the command-line.
+    for arg in sys.argv[1:]:
+   	if arg == '-text':
+   	    run_graphical_version = False
    
-   if run_graphical_version:
-   	   graphical_version()
-   else:
-       command_line_version()
-   
+    if run_graphical_version:
+   	graphical_version()
+    else:
+        command_line_version()
