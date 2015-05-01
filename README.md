@@ -9,7 +9,7 @@ python main.py
 
 ### Usage
 #### Command-Line Options
-* **-text** runs the program in text-mode only. No graphics displayed. The default behaviour (no -text) is to show graphics.
+* **-text** runs the program in text-mode only. No graphics displayed. The default behaviour (no **-text**) is to show graphics.
 
 ### License
 EasyTicket is licensed under the [MIT License](https://github.com/elailai94/EasyTicket/blob/master/LICENSE.md).
