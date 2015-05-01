@@ -176,3 +176,17 @@ class Network:
             closestnode = min(unvisiteds, key = unvisiteds.get)
             
             return self.find_shortest_path(closestnode, station_b, visited, distances, predecessors)
+
+
+    # Returns a set of zones visited by the path taken in the
+    # network. 
+    def get_zones_visited(self, path):
+        isinstance(self, Network)
+        zones_visited = set()
+        # Extracts the zone where each station in the path is located.
+        for station in path:
+            station_zones = self.__network[station][0].get_zones()
+            for zone in station_zones:
+                zones_visited.add(zone)
+        return zones_visited
+        
