@@ -2,6 +2,11 @@
 ### About
 EasyTicket is a simple ticket vending system for the London Underground. It is written entirely in Python.
 
+### Screenshots
+#### Command-Line Interface
+##### Sample Interaction
+
+
 ### Execution
 ```Bash
 python main.py
