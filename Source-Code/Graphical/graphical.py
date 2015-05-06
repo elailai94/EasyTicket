@@ -14,5 +14,5 @@ from ticket_machine import TicketMachine
 
 # Runs the graphical version of the system.
 def graphical_version():
-	print "This is the graphical version of the EasyTicket system."
-	#Tkinter.mainloop()
+    print "This is the graphical version of the EasyTicket system."
+    #Tkinter.mainloop()
