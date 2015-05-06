@@ -9,6 +9,7 @@
 
 # Graphical module (graphical.py)
 
+import Tkinter
 from ticket_machine import TicketMachine
 
 # Runs the graphical version of the system.
