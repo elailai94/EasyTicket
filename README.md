@@ -1,4 +1,5 @@
-# EasyTicket
+![EasyTicket_Logo](https://cloud.githubusercontent.com/assets/7763904/7895689/b8ca874e-0669-11e5-8e41-a646f261a36e.png)
+
 ### About
 EasyTicket is a simple ticket vending system for the [London Underground](http://en.wikipedia.org/wiki/London_Underground). It is written entirely in Python. The graphical component of the system is implemented using the Tkinter library.
 
