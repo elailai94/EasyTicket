@@ -1,181 +1,67 @@
-#==============================================================================
+# ==============================================================================
 # EasyTicket
 #
 # @description: Module for providing methods to work with Network objects
 # @author: Elisha Lai
 # @version: 1.2 16/04/2015
-#==============================================================================
+# ==============================================================================
 
-# Network module (network.py)
+import networkx
+import sqlite3
 
-from sys import maxint
-from station import Station
 
-# Object definition
 class Network:
-
-
-    'Fields: num_of_stations, num_of_links, network'
-    # A Network is an object in which:
-    # - num_of_stations is an Int (number of stations in this network)
-    # - num_of_links is an Int (number of links between stations
-    #	in this network)
-    # - network is a Stationdict (network)
-
-    # A stationdict is a dictionary where:
-    # - the keys are Str values 
-    # - the values themselves are Stationtuples
-
-    # A stationtuple is a 2-tuple where:
-    # - the first item is a Station
-    # - the second item is a Distancedict
-
-    # A distancedict is a dictionary where:
-    # - the keys are Str values
-    # - the values themselves are Float values
-
-
     # Initializes the object.
     def __init__(self):
-	self.__num_of_stations = 0
-	self.__num_of_links = 0
-        self.__network = {}
+        self.__network = networkx.Graph()
+        self.__add_stations()
+        self.__add_station_zone_assignments()
+        self.__add_connections()
 
+    # Adds stations to the network from the database.
+    def __add_stations(self):
+        connection = sqlite3.connect("easy_ticket.db")
+        cursor = connection.cursor()
+        select_from_station_table_string = "SELECT S.name FROM station S"
+        cursor.execute(select_from_station_table_string)
+        result_set = cursor.fetchall()
+        for result in result_set:
+            self.__network.add_node(result[0], zones=set())
+        cursor.close()
+        connection.close()
 
-    # Returns a string representation of the object.
-    def __repr__(self):
-    	return 'Number of Stations:%d  Number of Links:%d\nNetwork:%r' \
-    	       % (self.__num_of_stations, self.__num_of_links, self.__network)
+    def __add_station_zone_assignments(self):
+        connection = sqlite3.connect("easy_ticket.db")
+        cursor = connection.cursor()
+        select_from_station_zone_assignment_table_string = "SELECT S.name, Z.id FROM station_zone_assignment SZA, station S, zone Z WHERE SZA.station = S.id AND SZA.zone = Z.id"
+        cursor.execute(select_from_station_zone_assignment_table_string)
+        result_set = cursor.fetchall()
+        for result in result_set:
+            station_name = result[0]
+            station_zone = result[1]
+            self.__network.node[station_name]["zones"].add(station_zone)
+        cursor.close()
+        connection.close()
 
+    # Adds connections to the network from the database.
+    def __add_connections(self):
+        connection = sqlite3.connect("easy_ticket.db")
+        cursor = connection.cursor()
+        select_from_connection_table_string = "SELECT S1.name, S2.name, C.distance FROM station S1, station S2, connection C WHERE station_a = S1.id AND station_b = S2.id"
+        cursor.execute(select_from_connection_table_string)
+        result_set = cursor.fetchall()
+        for result in result_set:
+            self.__network.add_edge(result[0], result[1], weight=result[2])
+        cursor.close()
+        connection.close()
 
-    # Builds the network from data files.
-    def build_network(self):
-    	isinstance(self, Network)
-    	self.__import_lines()
-    	self.__import_links()
+    # Returns the shortest route from origin station to destination station.
+    def get_shortest_route(self, origin_station, destination_station):
+        return networkx.dijkstra_path(self.__network, origin_station, destination_station)
 
-
-    # Imports lines into the network from data file.
-    def __import_lines(self, file_name = 'lines.txt'):
-        input_file = file(file_name, 'r')
-        # Stores the number of lines
-        num_of_lines = int(input_file.readline().strip())
-        
-        # Imports information for each line into the network
-        # from file_name  
-        i = 0
-        while i < num_of_lines:
-            line_file_name = input_file.readline().strip() + '.txt'
-            self.__import_stations(line_file_name)
-            i += 1
-
-        input_file.close()
-
-
-    # Imports stations into the network from data file.
-    def __import_stations(self, file_name):
-    	input_file = file(file_name, 'r')
-    	# Stores the name of the line
-    	line_name = input_file.readline().strip()
-    	# Stores the number of stations in the line
-    	num_of_stations = int(input_file.readline().strip())
-    	
-    	# Imports information for each station into the network
-    	# from file_name
-    	i = 0
-    	while i < num_of_stations:
-    	    station_info = input_file.readline().strip().split(';')
-            station_name = station_info[0].strip()
-
-            if station_name not in self.__network:
-            	new_station = Station(station_name)
-            	new_station.add_line(line_name)
-            	station_zones = station_info[1].split('+')
-                for zone in station_zones:
-                    new_station.add_zone(int(zone.strip()))
-                self.__network[station_name] = (new_station, {})
-                self.__num_of_stations += 1
-            else:
-            	self.__network[station_name][0].add_line(line_name)
-    	    i += 1
-
-    	input_file.close()
-
-
-    # Imports links into the network from data file.
-    def __import_links(self, file_name = 'links.txt'):
-    	input_file = file(file_name, 'r')
-    	# Stores the number of links
-    	num_of_links = int(input_file.readline().strip())
-
-    	# Imports information for each link into the network
-    	# from file_name
-    	i = 0
-    	while i < num_of_links:
-    	    link_info = input_file.readline().strip().split(';')
-    	    station_a = link_info[0].strip()
-    	    station_b = link_info[1].strip()
-    	    link_distance = float(link_info[2].strip())
-    	    self.__add_link(station_a, station_b, link_distance)
-    	    i += 1
-
-    	input_file.close()
-
-
-    # Adds a link between station_a and station_b in the network
-    # and labels the link with distance between the two stations.
-    def __add_link(self, station_a, station_b, distance):
-    	if station_a in self.__network and\
-    	   station_b in self.__network and\
-    	   (station_a != station_b):
-    	    self.__network[station_a][1][station_b] = distance
-    	    self.__network[station_b][1][station_a] = distance
-    	    self.__num_of_links += 1
-
-
-    # Returns True if station is in the network. Otherwise, False is
-    # return.
-    def is_in_network(self, station):
-    	isinstance(self, Network)
-    	return station in self.__network
-
-
-    # Finds the shortest path between station_a and station_b in the
-    # network.
-    def find_shortest_path(self, station_a, station_b, visited = [], distances = {}, predecessors = {}):
-    	isinstance(self, Network)
-    	if station_a in self.__network and\
-    	   station_b in self.__network:
-            # Returns the path to station_b
-            if station_a == station_b:
-                path = []
-                while station_b != None:
-                    path.append(station_b)
-                    station_b = predecessors.get(station_b, None)
-                return distances[station_a], path[::-1]
-            
-            # Checks if it's the first time through and sets current
-            # distance to zero
-            if not visited: 
-        	    distances[station_a] = 0
-            
-            # Processes neighbours and keeps track of predecessors
-            for neighbour in self.__network[station_a][1]:
-                if neighbour not in visited:
-                    neighbour_dist = distances.get(neighbour, maxint)
-                    tentative_dist = distances[station_a] +\
-                                     self.__network[station_a][1][neighbour]
-                    if tentative_dist < neighbour_dist:
-                        distances[neighbour] = tentative_dist
-                        predecessors[neighbour] = station_a
-            
-            # Marks the current station as visited
-            visited.append(station_a)
-            # Finds the closest unvisited station to station_a
-            unvisiteds = dict((k, distances.get(k, maxint)) for k in self.__network if k not in visited)
-            closestnode = min(unvisiteds, key = unvisiteds.get)
-            
-            return self.find_shortest_path(closestnode, station_b, visited, distances, predecessors)
+    # Returns the set of zones visited by the route taken in the network.
+    def get_zones_visited(self, route):
+        zones_visited = set()
 
 
     # Returns a set of zones visited by the path taken in the
@@ -189,4 +75,3 @@ class Network:
             for zone in station_zones:
                 zones_visited.add(zone)
         return zones_visited
-        
