@@ -12,17 +12,18 @@ import sqlite3
 
 class Network:
     # Initializes the object.
-    def __init__(self):
+    def __init__(self, database_name):
         self.__network = networkx.Graph()
-        self.__add_stations()
-        self.__add_station_zone_assignments()
-        self.__add_connections()
+        self.__add_stations(database_name)
+        self.__add_station_zone_assignments(database_name)
+        self.__add_connections(database_name)
 
     # Adds stations to the network from the database.
-    def __add_stations(self):
-        connection = sqlite3.connect("easy_ticket.db")
+    def __add_stations(self, database_name):
+        connection = sqlite3.connect(database_name)
         cursor = connection.cursor()
-        select_from_station_table_string = "SELECT S.name FROM station S"
+        select_from_station_table_string = "SELECT S.name " + \
+                                           "FROM station S"
         cursor.execute(select_from_station_table_string)
         result_set = cursor.fetchall()
         for result in result_set:
@@ -30,10 +31,13 @@ class Network:
         cursor.close()
         connection.close()
 
-    def __add_station_zone_assignments(self):
-        connection = sqlite3.connect("easy_ticket.db")
+    # Adds station zone assignments to the network from the database.
+    def __add_station_zone_assignments(self, database_name):
+        connection = sqlite3.connect(database_name)
         cursor = connection.cursor()
-        select_from_station_zone_assignment_table_string = "SELECT S.name, Z.id FROM station_zone_assignment SZA, station S, zone Z WHERE SZA.station = S.id AND SZA.zone = Z.id"
+        select_from_station_zone_assignment_table_string = "SELECT S.name, Z.id " + \
+                                                           "FROM station_zone_assignment SZA, station S, zone Z " + \
+                                                           "WHERE SZA.station = S.id AND SZA.zone = Z.id"
         cursor.execute(select_from_station_zone_assignment_table_string)
         result_set = cursor.fetchall()
         for result in result_set:
@@ -44,10 +48,12 @@ class Network:
         connection.close()
 
     # Adds connections to the network from the database.
-    def __add_connections(self):
-        connection = sqlite3.connect("easy_ticket.db")
+    def __add_connections(self, database_name):
+        connection = sqlite3.connect(database_name)
         cursor = connection.cursor()
-        select_from_connection_table_string = "SELECT S1.name, S2.name, C.distance FROM station S1, station S2, connection C WHERE station_a = S1.id AND station_b = S2.id"
+        select_from_connection_table_string = "SELECT S1.name, S2.name, C.distance " + \
+                                              "FROM station S1, station S2, connection C " + \
+                                              "WHERE station_a = S1.id AND station_b = S2.id"
         cursor.execute(select_from_connection_table_string)
         result_set = cursor.fetchall()
         for result in result_set:
@@ -63,15 +69,14 @@ class Network:
     def get_zones_visited(self, route):
         zones_visited = set()
 
-
     # Returns a set of zones visited by the path taken in the
-    # network. 
-    def get_zones_visited(self, path):
-        isinstance(self, Network)
-        zones_visited = set()
+    # network.
+    #def get_zones_visited(self, path):
+    #    isinstance(self, Network)
+    #    zones_visited = set()
         # Extracts the zone where each station in the path is located.
-        for station in path:
-            station_zones = self.__network[station][0].get_zones()
-            for zone in station_zones:
-                zones_visited.add(zone)
-        return zones_visited
+    #    for station in path:
+    #        station_zones = self.__network[station][0].get_zones()
+    #        for zone in station_zones:
+    #            zones_visited.add(zone)
+    #    return zones_visited
