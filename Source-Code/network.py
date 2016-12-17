@@ -1,73 +1,95 @@
-# ==============================================================================
+# =============================================================================
 # EasyTicket
 #
 # @description: Module for providing methods to work with Network objects
 # @author: Elisha Lai
 # @version: 1.2 16/04/2015
-# ==============================================================================
+# =============================================================================
 
-import networkx
-import sqlite3
+from networkx import Graph
+from networkx import all_pairs_dijkstra_path
+from networkx import floyd_warshall
+from sqlite3 import connect
 
 
 class Network:
     # Initializes the object.
     def __init__(self, database_name):
-        self.__network = networkx.Graph()
-        self.__add_stations(database_name)
-        self.__add_station_zone_assignments(database_name)
-        self.__add_connections(database_name)
+        self.network = Graph()
+        database_connection = connect(database_name)
+        self.add_stations(database_connection)
+        self.add_station_zone_assignments(database_connection)
+        self.add_connections(database_connection)
+        database_connection.close()
+        
+        self.all_pairs_dijkstra_path = all_pairs_dijkstra_path(self.network)
+        self.floyd_warshall = floyd_warshall(self.network)
+        
 
     # Adds stations to the network from the database.
-    def __add_stations(self, database_name):
-        connection = sqlite3.connect(database_name)
-        cursor = connection.cursor()
-        select_from_station_table_string = "SELECT S.name " + \
-                                           "FROM station S"
-        cursor.execute(select_from_station_table_string)
-        result_set = cursor.fetchall()
-        for result in result_set:
-            self.__network.add_node(result[0], zones=set())
-        cursor.close()
-        connection.close()
+    def add_stations(self, database_connection):
+        database_cursor = database_connection.cursor()
+        select_from_station_table_string = \
+           "SELECT S.name " + \
+           "FROM station S"
+        database_cursor.execute(select_from_station_table_string)
+        database_result_set = database_cursor.fetchall()
+        for database_result in database_result_set:
+            station_name = database_result[0]
+            self.network.add_node(station_name, zones=set())
+        database_cursor.close()
 
     # Adds station zone assignments to the network from the database.
-    def __add_station_zone_assignments(self, database_name):
-        connection = sqlite3.connect(database_name)
-        cursor = connection.cursor()
-        select_from_station_zone_assignment_table_string = "SELECT S.name, Z.id " + \
-                                                           "FROM station_zone_assignment SZA, station S, zone Z " + \
-                                                           "WHERE SZA.station = S.id AND SZA.zone = Z.id"
-        cursor.execute(select_from_station_zone_assignment_table_string)
-        result_set = cursor.fetchall()
-        for result in result_set:
-            station_name = result[0]
-            station_zone = result[1]
-            self.__network.node[station_name]["zones"].add(station_zone)
-        cursor.close()
-        connection.close()
+    def add_station_zone_assignments(self, database_connection):
+        database_cursor = database_connection.cursor()
+        select_from_station_zone_assignment_table_string = \
+           "SELECT S.name, Z.id " + \
+           "FROM station_zone_assignment SZA, station S, zone Z " + \
+           "WHERE SZA.station = S.id AND SZA.zone = Z.id"
+        database_cursor.execute(select_from_station_zone_assignment_table_string)
+        database_result_set = database_cursor.fetchall()
+        for database_result in database_result_set:
+            station_name = database_result[0]
+            station_zone = database_result[1]
+            self.network.node[station_name]["zones"].add(station_zone)
+        database_cursor.close()
 
     # Adds connections to the network from the database.
-    def __add_connections(self, database_name):
-        connection = sqlite3.connect(database_name)
-        cursor = connection.cursor()
-        select_from_connection_table_string = "SELECT S1.name, S2.name, C.distance " + \
-                                              "FROM station S1, station S2, connection C " + \
-                                              "WHERE station_a = S1.id AND station_b = S2.id"
-        cursor.execute(select_from_connection_table_string)
-        result_set = cursor.fetchall()
-        for result in result_set:
-            self.__network.add_edge(result[0], result[1], weight=result[2])
-        cursor.close()
-        connection.close()
+    def add_connections(self, database_connection):
+        database_cursor = database_connection.cursor()
+        select_from_connection_table_string = \
+           "SELECT S1.name, S2.name, C.distance " + \
+           "FROM station S1, station S2, connection C " + \
+           "WHERE station_a = S1.id AND station_b = S2.id"
+        database_cursor.execute(select_from_connection_table_string)
+        database_result_set = database_cursor.fetchall()
+        for database_result in database_result_set:
+            station_a_name = database_result[0]
+            station_b_name = database_result[1]
+            distance_between_stations = database_result[2]
+            self.network.add_edge(station_a_name, station_b_name,
+                weight=distance_between_stations)
+        database_cursor.close()
 
     # Returns the shortest route from origin station to destination station.
     def get_shortest_route(self, origin_station, destination_station):
-        return networkx.dijkstra_path(self.__network, origin_station, destination_station)
+        #return networkx.dijkstra_path(self.__network, origin_station, destination_station)
+        #return networkx.all_pairs_dijkstra_path(self.__network)
+        return self.all_pairs_dijkstra_path[origin_station][destination_station]
+
+    # Returns
+    def get_floyd_warshall(self):
+        return self.floyd_warshall
 
     # Returns the set of zones visited by the route taken in the network.
     def get_zones_visited(self, route):
         zones_visited = set()
+
+    def draw(self):
+        networkx.draw(self.network)
+
+    def get_graph(self):
+        return self.network
 
     # Returns a set of zones visited by the path taken in the
     # network.
