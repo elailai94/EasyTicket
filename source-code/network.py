@@ -8,23 +8,23 @@
 
 from networkx import Graph
 from networkx import all_pairs_dijkstra_path
-from networkx import floyd_warshall
 from sqlite3 import connect
 
 
 class Network:
     # Initializes the object.
     def __init__(self, database_name):
+        self.initialize_network(database_name)
+        self.find_all_pairs_shortest_route()
+
+    # Initializes the network.
+    def initialize_network(self, database_name):
         self.network = Graph()
         database_connection = connect(database_name)
         self.add_stations(database_connection)
         self.add_station_zone_assignments(database_connection)
         self.add_connections(database_connection)
         database_connection.close()
-        
-        self.all_pairs_dijkstra_path = all_pairs_dijkstra_path(self.network)
-        self.floyd_warshall = floyd_warshall(self.network)
-        
 
     # Adds stations to the network from the database.
     def add_stations(self, database_connection):
@@ -71,25 +71,19 @@ class Network:
                 weight=distance_between_stations)
         database_cursor.close()
 
-    # Returns the shortest route from origin station to destination station.
-    def get_shortest_route(self, origin_station, destination_station):
-        #return networkx.dijkstra_path(self.__network, origin_station, destination_station)
-        #return networkx.all_pairs_dijkstra_path(self.__network)
-        return self.all_pairs_dijkstra_path[origin_station][destination_station]
+    # Finds shortest routes between all pairs of stations in the network.
+    def find_all_pairs_shortest_route(self):
+        self.all_pairs_shortest_route = all_pairs_dijkstra_path(self.network)
 
-    # Returns
-    def get_floyd_warshall(self):
-        return self.floyd_warshall
+    # Returns the shortest route from origin station to destination station
+    # in the network.
+    def get_shortest_route(self, origin_station, destination_station):
+        return self.all_pairs_shortest_route[origin_station][destination_station]
 
     # Returns the set of zones visited by the route taken in the network.
     def get_zones_visited(self, route):
         zones_visited = set()
-
-    def draw(self):
-        networkx.draw(self.network)
-
-    def get_graph(self):
-        return self.network
+        return zones_visited
 
     # Returns a set of zones visited by the path taken in the
     # network.
