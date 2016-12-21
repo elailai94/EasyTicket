@@ -14,7 +14,7 @@ from model import Model
 def main():
     # Creates the window
     window = Tk()
-    window.title("EasyTicket")
+    window.title("Easy Ticket")
 
     # Creates a model and initializes it
     model = Model()
@@ -25,14 +25,15 @@ def main():
 
     # Tells model about all the views
     #model.add_observer()
+    
+    # Loop
     window.mainloop()
 
-
-def make_menu_bar(window, model):
+def make_menu_bar(window):
     menu_bar = Menu(window)
-
+    
     file_menu = Menu(menu_bar)
-    file_menu.add_command(label="Quit", command="window.quit")
+    file_menu.add_cascade(label="File", menu=file_menu)
 
 if __name__ == '__main__':
     main()
